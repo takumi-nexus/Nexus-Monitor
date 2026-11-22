@@ -1,0 +1,21 @@
+<UserControl x:Class="Nexus.App.Views.PlaceholderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.25"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <StackPanel Margin="36">
+        <TextBlock Text="{Binding Title}" Style="{StaticResource PageTitleText}"/>
+        <TextBlock Text="{Binding Description}" Style="{StaticResource SecondaryText}" Margin="0,4,0,24"/>
+        <Border Style="{StaticResource CardStyle}">
+            <TextBlock Text="Non disponible : ce module sera développé dans une prochaine phase."
+                       Style="{StaticResource SecondaryText}" TextWrapping="Wrap"/>
+        </Border>
+    </StackPanel>
+</UserControl>
